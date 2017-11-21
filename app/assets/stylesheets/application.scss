@@ -2,4 +2,7 @@
   @import "./reset";
 
 // デフォルトのスタイル
-  @import "./default";
+  @import "./style";
+
+// ユーザー管理系
+  @import "./users/new"

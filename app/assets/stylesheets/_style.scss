@@ -1,5 +1,8 @@
 body {
   font-size: 14px;
+  color: #4A4A4A;
+  line-height: 1.5;
+  font-family: 'PT Sans', sans-serif;
 }
 
 h1 {
@@ -25,6 +28,10 @@ a {
 
 li {
   list-style: none;
+}
+
+.wrapper {
+
 }
 
 @media (max-width: 414px) {
