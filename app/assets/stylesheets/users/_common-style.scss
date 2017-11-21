@@ -1,4 +1,40 @@
 .content {
+  &__sign-up-and-in {
+    text-align: center;
+    margin-top: 40px;
+    &__left {
+      float: left;
+      width: 40%;
+      height: 100%;
+      display: table;
+      &__icon-area {
+        display: table-cell;
+        vertical-align: middle;
+        &__icon {
+        }
+      }
+    }
+    &__right {
+      float: left;
+      width: 60%;
+      text-align: left;
+      border: solid #ddd 1px;
+      padding: 20px;
+      &__title-area {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
-.
+.align {
+  display: inline-block;
+  width: 800px;
+  overflow: auto;
+  height: 400px;
+}
+
+.actions {
+  display: inline-block;
+  float: right;
+}
