@@ -1,0 +1,17 @@
+body {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 414px) {
+  body {
+    font-size: 12px;
+  }
+}
