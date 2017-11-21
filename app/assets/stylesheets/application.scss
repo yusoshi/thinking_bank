@@ -1,0 +1,10 @@
+//リセット
+  @import "./reset";
+
+// デフォルトのスタイル
+  @import "./desktop-style";
+  @import "./mobile-style";
+
+// ユーザー管理系
+  @import "./users/desktop-common-style";
+  @import "./users/mobile-common-style";
