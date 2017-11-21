@@ -4,7 +4,7 @@
     margin-top: 40px;
     &__left {
       float: left;
-      width: 40%;
+      width: 30%;
       height: 100%;
       display: table;
       &__icon-area {
@@ -20,6 +20,7 @@
       text-align: left;
       border: solid #ddd 1px;
       padding: 20px;
+      margin-left: 80px;
       &__title-area {
         margin-bottom: 20px;
       }
@@ -37,4 +38,14 @@
 .actions {
   display: inline-block;
   float: right;
+}
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.margin-bottom {
+  margin-bottom: 14px;
 }
