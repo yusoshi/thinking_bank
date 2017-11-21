@@ -99,8 +99,6 @@ li {
 }
 
 
-@media (max-width: 414px) {
-  body {
-    font-size: 12px;
-  }
+.desktop-none {
+  display: none;
 }

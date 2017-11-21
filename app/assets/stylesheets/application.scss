@@ -2,7 +2,9 @@
   @import "./reset";
 
 // デフォルトのスタイル
-  @import "./style";
+  @import "./desktop-style";
+  @import "./mobile-style";
 
 // ユーザー管理系
-  @import "./users/common-style"
+  @import "./users/desktop-common-style";
+  @import "./users/mobile-common-style";

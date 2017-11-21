@@ -1,0 +1,25 @@
+@media (max-width: 414px) {
+  .content {
+    padding: 0 10px;
+    &__sign-up-and-in {
+      margin-top: -15px;
+      &__left {
+        float: none;
+        width: 100%;
+        position: relative;
+      }
+      &__right {
+        float: none;
+        width: 100% - 5;
+        position: absolute;
+        top: 10px;
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+
+  .align {
+    width: 100%;
+  }
+}
