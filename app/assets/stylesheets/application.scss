@@ -5,6 +5,10 @@
   @import "./desktop-style";
   @import "./mobile-style";
 
+// ヘッダー
+  // ユーザー管理におけるヘッダー
+  @import "./header/desktop-header";
+
 // ユーザー管理系
   @import "./users/desktop-common-style";
   @import "./users/mobile-common-style";
