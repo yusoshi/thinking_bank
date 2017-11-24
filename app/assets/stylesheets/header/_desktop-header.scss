@@ -11,7 +11,7 @@
       display: table-cell;
       vertical-align: middle;
       &__icon-area {
-        width: 75px;
+        width: 60px;
         display: table-cell;
         vertical-align: middle;
         &__main-icon {
@@ -34,13 +34,12 @@
       vertical-align: middle;
       text-align: right;
       &__icon-area {
-        height: 30px;
+        height: 24px;
         display: inline-block;
         &__lists {
           &__list {
             float: left;
             margin-left: 30px;
-            height: 30px;
             display: table;
             &__link {
               display: table-cell;
@@ -48,8 +47,8 @@
               text-decoration: none;
             }
             &__link img {
-              width: 30px;
-              height: 30px;
+              width: 24px;
+              height: 24px;
             }
           }
         }

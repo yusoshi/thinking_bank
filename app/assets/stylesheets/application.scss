@@ -1,6 +1,9 @@
 //リセット
   @import "./reset";
 
+// 変数管理
+  @import "./var";
+
 // デフォルトのスタイル
   @import "./desktop-style";
   @import "./mobile-style";

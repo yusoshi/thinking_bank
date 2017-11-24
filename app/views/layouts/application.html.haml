@@ -8,9 +8,9 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p{class: "notice"}
+    %p{class: "notice flash-message"}
       = notice
-    %p{class: "alert"}
+    %p{class: "alert flash-message"}
       = alert
     = render 'layouts/header'
     = yield

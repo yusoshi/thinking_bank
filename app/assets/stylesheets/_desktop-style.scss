@@ -98,11 +98,26 @@ li {
   background-color: #000000;
 }
 
+// テキストリンク
+.text-link:hover {
+  color: #aaa;
+}
 
+// フラッシュメッセージ
+.flash-message {
+  width: 100%;
+  text-align: center;
+  background-color: $main-color;
+  color: #fff;
+  
+}
+
+
+// デスクトップでは表示させない要素に付加
 .desktop-none {
   display: none;
 }
 
-.text-link:hover {
-  color: #aaa;
-}
+
+
+
