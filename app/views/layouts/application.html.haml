@@ -12,6 +12,5 @@
       = notice
     %p{class: "alert"}
       = alert
-    - if :devise_controller?
-      = render 'layouts/users-header'
+    = render 'layouts/header'
     = yield

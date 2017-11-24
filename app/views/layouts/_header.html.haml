@@ -1,0 +1,19 @@
+.div{ class: "header-wrapper" }
+  %header{ class: "header-wrapper__header", id: "top-head" }
+    .header-wrapper__header__left
+      .header-wrapper__header__left__icon-area
+        = image_tag('main_icon.png', class: "header-wrapper__header__left__icon-area__main-icon")
+      %h1{ class: "header-wrapper__header__left__title" }
+        = link_to '思考銀行', root_path
+    .header-wrapper__header__right
+      .header-wrapper__header__right__icon-area
+        %ul{ class: "header-wrapper__header__right__icon-area__lists" }
+          %li{ class: "header-wrapper__header__right__icon-area__lists__list"}
+            = link_to image_tag('writing.png'), '', class: "header-wrapper__header__right__icon-area__lists__list__link"
+          %li{ class: "header-wrapper__header__right__icon-area__lists__list"}
+            = link_to image_tag('setting.png'), '', class: "header-wrapper__header__right__icon-area__lists__list__link"
+          %li{ class: "header-wrapper__header__right__icon-area__lists__list"}
+            = link_to image_tag('help.png'), '', class: "header-wrapper__header__right__icon-area__lists__list__link"
+          %li{ class: "header-wrapper__header__right__icon-area__lists__list"}
+            = link_to 'Logout', '', class: "header-wrapper__header__right__icon-area__lists__list__link text-link"
+

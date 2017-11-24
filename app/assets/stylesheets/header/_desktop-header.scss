@@ -1,0 +1,59 @@
+.header-wrapper {
+  &__header {
+    height: 70px;
+    display: table;
+    padding: 0 40px;
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+    &__left {
+      width: 200px;
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      &__icon-area {
+        width: 75px;
+        display: table-cell;
+        vertical-align: middle;
+        &__main-icon {
+          width: 50px;
+          height: 50px;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      &__title {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      &__title a {
+        text-decoration: none;
+      }
+    }
+    &__right {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: right;
+      &__icon-area {
+        height: 30px;
+        display: inline-block;
+        &__lists {
+          &__list {
+            float: left;
+            margin-left: 30px;
+            height: 30px;
+            display: table;
+            &__link {
+              display: table-cell;
+              vertical-align: middle;
+              text-decoration: none;
+            }
+            &__link img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
