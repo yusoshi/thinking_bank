@@ -19,7 +19,7 @@ body {
 }
 
 .content {
-  padding: 0 40px;
+  padding: 20px 40px 0 40px;
 }
 
 h1 {
@@ -103,13 +103,26 @@ li {
   color: #aaa;
 }
 
+.non-deco {
+  text-decoration: none;
+}
+
+// スクエア
+.square {
+  width: 8px;
+  height: 24px;
+  background-color: $main-color;
+  float: left;
+}
+
+
+
 // フラッシュメッセージ
 .flash-message {
   width: 100%;
   text-align: center;
   background-color: $main-color;
   color: #fff;
-  
 }
 
 

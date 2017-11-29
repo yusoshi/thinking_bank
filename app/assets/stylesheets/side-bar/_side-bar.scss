@@ -1,0 +1,20 @@
+.content {
+  &__side-menu {
+    width: 20%;
+    height: 160px;
+    float: left;
+    border: solid 1px #ddd;
+    padding: 10px 10px;
+    &__title-area {
+      &__title {
+        padding-left: 14px;
+      }
+    }
+    &__link-lists {
+      padding-left: 14px;
+      &__list {
+        margin-top: 10px;
+      }
+    }
+  }
+}

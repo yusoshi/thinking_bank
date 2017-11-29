@@ -12,8 +12,15 @@
   // ユーザー管理におけるヘッダー
   @import "./header/desktop-header";
 
+// サイドバー
+@import './side-bar/side-bar';
+
 // ユーザー管理系
-  @import "./users/desktop-common-style";
-  @import "./users/mobile-common-style";
-  @import "./users/desktop-sign-in";
-  @import "./users/mobile-sign-in";
+  // サインアップとイン
+    @import "./users/desktop-common-style";
+    @import "./users/mobile-common-style";
+    @import "./users/desktop-sign-in";
+    @import "./users/mobile-sign-in";
+  
+  // ユーザー設定の編集
+  @import "./users/desktop-setting";
