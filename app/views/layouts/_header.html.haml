@@ -1,11 +1,12 @@
-.div{ class: "header-wrapper" }
+.header-wrapper
   %header{ class: "header-wrapper__header", id: "top-head" }
     .header-wrapper__header__left
       .header-wrapper__header__left__icon-area
         = link_to image_tag('main_icon.png', class: "header-wrapper__header__left__icon-area__main-icon"), root_path
       %h1{ class: "header-wrapper__header__left__title" }
         = link_to '思考銀行', root_path
-    .header-wrapper__header__right
+    / デスクトップ表示
+    .header-wrapper__header__right.mobile-none
       .header-wrapper__header__right__icon-area
         %ul{ class: "header-wrapper__header__right__icon-area__lists" }
           %li{ class: "header-wrapper__header__right__icon-area__lists__list"}
@@ -16,4 +17,20 @@
             = link_to image_tag('header/help.png'), '', class: "header-wrapper__header__right__icon-area__lists__list__link"
           %li{ class: "header-wrapper__header__right__icon-area__lists__list"}
             = link_to 'Logout', destroy_user_session_path, method: :delete, class: "header-wrapper__header__right__icon-area__lists__list__link text-link"
+
+    / モバイル表示
+    .header-wrapper__header__right
+      .header-wrapper__header__right__toggle-area.toggle-area
+        .header-wrapper__header__right__toggle-area__toggle-line.line1
+        .header-wrapper__header__right__toggle-area__toggle-line.line2
+        .header-wrapper__header__right__toggle-area__toggle-line.line3
+    .header-wrapper__header__global-nav#global-nav.desktop-none
+      %ul{ class: "header-wrapper__header__global-nav__links" }
+        %li{ class: "header-wrapper__header__global-nav__links__link-area" }
+          = link_to 'Setting', edit_user_registration_path, class: "header-wrapper__header__global-nav__links__link-area__link non-deco"
+        %li{ class: "header-wrapper__header__global-nav__links__link-area " }
+          = link_to 'Help(要リンク)', '', class: "header-wrapper__header__global-nav__links__link-area__link non-deco"
+        %li{ class: "header-wrapper__header__global-nav__links__link-area" }
+          = link_to 'Logout', destroy_user_session_path, class: "header-wrapper__header__global-nav__links__link-area__link non-deco", method: :delete
+
 
