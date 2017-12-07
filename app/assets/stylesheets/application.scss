@@ -13,8 +13,10 @@
   @import "./header/desktop-header";
   @import "./header/mobile-header";
 
-// サイドバー
-@import './side-bar/side-bar';
+// サブメニュー
+  // 設定のサブメニュー
+  @import './sub-menu/setting-sub-menu-desktop';
+  @import './sub-menu/setting-sub-menu-mobile';
 
 // ユーザー管理系
   // サインアップとイン
@@ -22,6 +24,7 @@
     @import "./users/mobile-common-style";
     @import "./users/desktop-sign-in";
     @import "./users/mobile-sign-in";
-  
+
   // ユーザー設定の編集
   @import "./users/desktop-setting";
+  @import "./users/mobile-setting";
