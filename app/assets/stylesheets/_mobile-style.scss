@@ -20,7 +20,7 @@
   }
 
   .mobile-none {
-    display: none;
+    display: none !important;
   }
 
   .desktop-none {
@@ -31,7 +31,33 @@
     opacity: 0.9;
   }
 
+  // プレイスホルダーの設定
   ::-webkit-input-placeholder {
   font-size: 10px;
-}
+  }
+
+  // スクエア
+  .square {
+    height: 20px;
+    margin-right: 4px;
+  }
+
+  // ボタンを画面いっぱいさせたいときつける
+  .full-width-btn {
+    width: 100%;
+  }
+    // usersコントローラのページ用
+    .mobile-actions {
+      float: none;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .ue {
+      margin-top: 20px;
+
+    }
+
+
+
 }

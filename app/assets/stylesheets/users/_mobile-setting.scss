@@ -1,0 +1,13 @@
+@media (max-width: 414px) {
+  .content {
+    &__main {
+      width: 100%;
+      float: none;
+      border: none;
+      &__sub-menu {
+        &__title-area {
+        }
+      }
+    }
+  }
+}

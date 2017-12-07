@@ -10,13 +10,13 @@ ja:
       invalid: "Invalid email or password."
       locked: "アカウントがロックされています。"
       last_attempt: "あなたのアカウントがロックされる前に、もう1つの試みを持っています。"
-      not_found_in_database: "メールアドレスまたはパスワードが無効です。"
+      not_found_in_database: "あなたの情報が見つかりません。もう一度試してください。"
       timeout: "一定時間が経過したため、再度ログインが必要です"
-      unauthenticated: "ログインまたは登録が必要です。"
+      unauthenticated: "ログインまたはアカウント作成が必要です。"
       unconfirmed: "本登録を行ってください。"
     mailer:
       confirmation_instructions:
-        subject: "アカウントの登録方法"
+        subject: "アカウントの作成方法"
       reset_password_instructions:
         subject: "パスワードの再設定"
       unlock_instructions:
@@ -31,8 +31,8 @@ ja:
       updated: "パスワードを変更しました。"
       updated_not_active: "パスワードを変更しました。"
     registrations:
-      destroyed: "アカウントを削除しました。またのご利用をお待ちしております。"
-      signed_up: "アカウント登録を受け付けました。"
+      destroyed: "アカウントを削除しました。"
+      signed_up: "アカウントを作成しました。"
       signed_up_but_inactive: "アカウントは登録されていますが、アクティブになっていないため利用できません。"
       signed_up_but_locked: "アカウントは登録されていますが、ロックされているため利用できません。"
       signed_up_but_unconfirmed: "確認メールを登録したメールアドレス宛に送信しました。リンクを開いてアカウントを有効にして下さい。"

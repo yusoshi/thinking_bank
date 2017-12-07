@@ -1,12 +1,30 @@
 //リセット
   @import "./reset";
 
+// 変数管理
+  @import "./var";
+
 // デフォルトのスタイル
   @import "./desktop-style";
   @import "./mobile-style";
 
+// ヘッダー
+  // ヘッダー
+  @import "./header/desktop-header";
+  @import "./header/mobile-header";
+
+// サブメニュー
+  // 設定のサブメニュー
+  @import './sub-menu/setting-sub-menu-desktop';
+  @import './sub-menu/setting-sub-menu-mobile';
+
 // ユーザー管理系
-  @import "./users/desktop-common-style";
-  @import "./users/mobile-common-style";
-  @import "./users/desktop-sign-in";
-  @import "./users/mobile-sign-in";
+  // サインアップとイン
+    @import "./users/desktop-common-style";
+    @import "./users/mobile-common-style";
+    @import "./users/desktop-sign-in";
+    @import "./users/mobile-sign-in";
+
+  // ユーザー設定の編集
+  @import "./users/desktop-setting";
+  @import "./users/mobile-setting";

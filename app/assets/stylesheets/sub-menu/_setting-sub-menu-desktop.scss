@@ -1,0 +1,26 @@
+.content {
+  &__sub-menu {
+    width: 20%;
+    height: 160px;
+    float: left;
+    border: solid 1px #ddd;
+    padding: 10px 10px;
+    &__title-area {
+      display: table;
+      &__title {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &__link-lists {
+      padding-left: 14px;
+      &__list {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.text-emphasize {
+  font-weight: 600;
+}
