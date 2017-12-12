@@ -1,0 +1,14 @@
+%li{ class: "content__main__memos-area__memo-area" }
+  .content__main__memos-area__memo-area__title-area
+    .content__main__memos-area__memo-area__title-area__square.square
+    %h3{ class: "content__main__memos-area__memo-area__title-area__title"}= idea.title
+  .content__main__memos-area__memo-area__date-area
+    %span 作成日
+    = idea.created_at.strftime("%Y/%m/%d %H:%M")
+    %span 最終更新日
+    = idea.updated_at.strftime("%Y/%m/%d %H:%M")
+  .content__main__memos-area__memo-area__body-area
+    %p{ class: "content__main__memos-area__memo-area__body-area__body" }= simple_format(idea.body)
+  .content__main__memos-area__memo-area__edit-and-delete
+    = link_to image_tag('icon-for-memo-area/delete.png'), ''
+    = link_to image_tag('icon-for-memo-area/edit.png'), ''

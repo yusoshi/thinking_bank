@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name, presence: true, uniqueness: true, length: { maximum: 20 }
+  has_many :ideas
 end

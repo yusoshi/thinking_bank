@@ -1,3 +1,9 @@
 .wrapper
   .outline
     .content
+      .content__index-sub-menu.mobile-none
+        .content__index-sub-menu__latest-memos-area
+        .content__index-sub-menu__calendar-area
+      .content__main.non-border.non-padding
+        %ul{ class: "content__main__memos-area" }
+          = render @ideas
