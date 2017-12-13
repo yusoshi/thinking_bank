@@ -46,6 +46,11 @@
   .full-width-btn {
     width: 100%;
   }
+
+  // border-bottomをつける
+  .border-bottom {
+    border-bottom: solid 1px #ddd!important;
+  }
     // usersコントローラのページ用
     .mobile-actions {
       float: none;
