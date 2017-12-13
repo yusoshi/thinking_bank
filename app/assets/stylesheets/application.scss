@@ -13,10 +13,16 @@
   @import "./header/desktop-header";
   @import "./header/mobile-header";
 
+// ideas/index
+  @import './idea-index-desktop';
+  @import './idea-index-mobile';
 // サブメニュー
   // 設定のサブメニュー
-  @import './sub-menu/setting-sub-menu-desktop';
-  @import './sub-menu/setting-sub-menu-mobile';
+  @import './sub-menu/setting/setting-sub-menu-desktop';
+  @import './sub-menu/setting/setting-sub-menu-mobile';
+
+  // トップページのサブメニュー
+  @import './sub-menu/idea-index/index-sub-menu';
 
 // ユーザー管理系
   // サインアップとイン

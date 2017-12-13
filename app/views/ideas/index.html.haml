@@ -1,1 +1,17 @@
-= link_to "ログアウト", destroy_user_session_path, method: :delete
+.second-header.desktop-none
+  %ul{ class: "second-header__icon-area" }
+    %li{ class: "second-header__icon-area__calendar-area" }
+      = link_to image_tag('header/calendar.png'), ''
+    %li{ class: "second-header__icon-area__latest-memos-area" }
+      = link_to image_tag('header/latest-memos.png'), ''
+    %li{ class: "second-header__icon-area__writing-area" }
+      = link_to image_tag('header/writing.png'), ''
+.wrapper
+  .outline
+    .content
+      .content__index-sub-menu.mobile-none
+        .content__index-sub-menu__latest-memos-area
+        .content__index-sub-menu__calendar-area
+      .content__main.non-border.non-padding
+        %ul{ class: "content__main__memos-area" }
+          = render @ideas

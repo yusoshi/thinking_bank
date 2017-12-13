@@ -103,8 +103,19 @@ li {
   color: #aaa;
 }
 
+// テキストデコレーション削除
 .non-deco {
-  text-decoration: none;
+  text-decoration: none!important;
+}
+
+// ボーダを無効にする
+.non-border {
+  border: none!important;
+}
+
+// paddingをなくす
+.non-padding {
+  padding: 0!important;
 }
 
 // スクエア

@@ -1,0 +1,17 @@
+.content {
+  &__index-sub-menu {
+    width: 20%;
+    float: left;
+    border: solid 1px #ddd;
+    padding: 10px 10px;
+    &__latest-memos-area {
+      background-color: red;
+      height: 160px;
+      margin-bottom: 14px;
+    }
+    &__calendar-area {
+      background-color: green;
+      height: 100px;
+    }
+  }
+}
