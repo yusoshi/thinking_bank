@@ -13,9 +13,14 @@
   @import "./header/desktop-header";
   @import "./header/mobile-header";
 
-// ideas/index
-  @import './idea-index-desktop';
-  @import './idea-index-mobile';
+// ideas
+  // index
+  @import './ideas/idea-index-desktop';
+  @import './ideas/idea-index-mobile';
+
+  // メモ書き込み
+  @import './ideas/writing-area';
+
 // サブメニュー
   // 設定のサブメニュー
   @import './sub-menu/setting/setting-sub-menu-desktop';
