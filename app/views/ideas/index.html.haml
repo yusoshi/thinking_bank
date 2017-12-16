@@ -16,9 +16,9 @@
         = form_for @idea, html: { class: "content__main__writing-area" } do |f|
           .content__main__writing-area__title-area
             .content__main__writing-area__title-area__square.square
-            = f.text_field :title, class: "content__main__writing-area__title-area__title form-decoration", placeholder: "アイデアのアイトルを入力してください。"
+            = f.text_field :title, class: "content__main__writing-area__title-area__title form-decoration", placeholder: "アイトル"
           .content__main__writing-area__body-area
-          = f.text_field :body, class: "content__main__writing-area__body-area__body form-decoration", placeholder: "アイデアの内容を入力してください。"
+          = f.text_field :body, class: "content__main__writing-area__body-area__body form-decoration", placeholder: "内容"
           .content__main__writing-area__btn-area
             = f.submit "保存", class: "content__main__writing-area__btn-area__btn btn btn-main full-width-btn"
         %ul{ class: "content__main__memos-area" }
