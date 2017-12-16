@@ -76,6 +76,10 @@ li {
   color: #9B9B9B;
 }
 
+input:-moz-placeholder {
+  color: #9B9B9B;
+}
+
 // ボタン
 .btn {
   display: inline-block;
