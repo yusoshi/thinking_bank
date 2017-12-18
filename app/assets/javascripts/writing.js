@@ -1,18 +1,22 @@
-/*  ヘッダーの書き込みボタンがクリックされたら
-    書き込みスペースをDOMで追加する*/
 $(function() {
-  $('.writing').on('click', function(e) {
-    e.preventDefault();
-    if ($('div').hasClass('content__main__writing-area')) {
-      $('.content__main__writing-area').remove();
-    } else {
-      var contentMain = $('.content__main');
-      var writingArea1 = contentMain.prepend(
-        '<div class="content__main__writing-area"><div class="content__main__writing-area__title-area"><div class="content__main__writing-area__title-area__square square"></div><div class="content__main__writing-area__title-area__title"></div></div><div class="content__main__writing-area__memo-area"></div></div>');
-      }
-    });
-
   // ideaがsubmitされたら非同期通信を行う
-  
+  $('#new_idea').on('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData($('form#new_idea').get(0));
 
+    $.ajax({
+      type: 'POST',
+      url: '/ideas.json',
+      data: formData,
+      processData: false,
+      contentType: false
+    })
+    // アイデアの保存に成功した場合
+    .done(function(data) {
+      alert(data);
+    })
+    .fail(function() {
+      alert('送信に失敗しました。')
+    })
+  });
 });
