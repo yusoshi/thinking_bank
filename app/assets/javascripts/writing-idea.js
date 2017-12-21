@@ -15,6 +15,7 @@ $(function() {
       var ideaTime3 = ideaTime2.replace(/\:\d\d.\d\d\d.\d\d.\d\d$/, ' ');
 
       // bodyの改行を有効にする。
+      // できてません。
       var tempBody = idea.body;
       var body = tempBody.replace(/\\r\\n/g, "<br>");
 
