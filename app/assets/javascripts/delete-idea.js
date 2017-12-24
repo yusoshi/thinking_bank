@@ -6,6 +6,7 @@ $(function() {
     function removeIdea(idea) {
     $('.content__main__memos-area__memo-area[data-id=' + idea.id +']').remove();
     }
+    
     var id = $('.content__main__memos-area__memo-area').data('id');
     alert('このアイデアを削除します。よろしいですか？');
 
