@@ -1,4 +1,4 @@
-%li{ class: "content__main__memos-area__memo-area" }
+%li{ class: "content__main__memos-area__memo-area", 'data-id': "#{ idea.id }" }
   .content__main__memos-area__memo-area__title-area
     .content__main__memos-area__memo-area__title-area__square.square
     %h3{ class: "content__main__memos-area__memo-area__title-area__title"}= idea.title
@@ -10,5 +10,5 @@
   .content__main__memos-area__memo-area__body-area
     %p{ class: "content__main__memos-area__memo-area__body-area__body" }= simple_format(idea.body)
   .content__main__memos-area__memo-area__edit-and-delete
-    = link_to image_tag('icon-for-memo-area/edit.png'), ''
-    = link_to image_tag('icon-for-memo-area/delete.png'), ''
+    = link_to image_tag('icon-for-memo-area/edit.png'), '', class: "content__main__memos-area__memo-area__edit-and-delete__edit"
+    = link_to image_tag('icon-for-memo-area/delete.png'), '', class: "content__main__memos-area__memo-area__edit-and-delete__delete"
