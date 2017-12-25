@@ -37,7 +37,6 @@
         background-color: #333;
         text-align: center;
         width: 100%;
-        height: 188px;
         display: block !important;
         -webkit-transition: .5s ease-in-out;
         -moz-transition: .5s ease-in-out;
@@ -57,9 +56,9 @@
   }
 
   .open #global-nav {
-    -moz-transform: translateY(600px);
-    -webkit-transform: translateY(600px);
-    transform: translateY(600px);
+    -moz-transform: translateY(550px);
+    -webkit-transform: translateY(550px);
+    transform: translateY(550px);
   }
 }
 
