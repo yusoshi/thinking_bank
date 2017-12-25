@@ -26,6 +26,19 @@ class IdeasController < ApplicationController
     end
   end
 
+  def update
+    @idea = Idea.find(params[:id])
+    if @idea.update(create_params)
+      respond_to do |format|
+        format.json {
+          render json: @idea }
+      end
+    else
+      flash.now[:alert] = "保存できませんでした。"
+      render action: :index
+    end
+  end
+
   def destroy
     @idea = Idea.find(params[:id])
     if @idea.destroy

@@ -31,6 +31,7 @@ $(function() {
       processData: false,
       contentType: false
     })
+
     // アイデアの保存に成功した場合
     .done(function(idea) {
       insertIdea(idea);
