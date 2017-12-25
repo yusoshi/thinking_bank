@@ -7,7 +7,8 @@ $(function() {
     $('.content__main__memos-area__memo-area[data-id=' + idea.id +']').remove();
     }
 
-    var id = $(this).parent().data('id');
+    var selectedMemoArea = $(this).parent().parent();
+    var id = selectedMemoArea.data('id');
 
     if (confirm('このアイデアを削除します。よろしいですか？')) {
       $.ajax({
