@@ -1,7 +1,15 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
-    @idea = Idea.new
+    respond_to do |format|
+      format.html {
+        @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
+        @idea = Idea.new
+
+      }
+      format.json {
+        render json: @idea = Idea.find(params[:id])
+      }
+    end
   end
 
   def create
@@ -15,6 +23,19 @@ class IdeasController < ApplicationController
         @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
         flash.now[:alert] = "保存できませんでした。"
         render action: :index
+    end
+  end
+
+  def update
+    @idea = Idea.find(params[:id])
+    if @idea.update(create_params)
+      respond_to do |format|
+        format.json {
+          render json: @idea }
+      end
+    else
+      flash.now[:alert] = "保存できませんでした。"
+      render action: :index
     end
   end
 
