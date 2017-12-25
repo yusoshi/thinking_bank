@@ -1,7 +1,15 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
-    @idea = Idea.new
+    respond_to do |format|
+      format.html {
+        @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
+        @idea = Idea.new
+
+      }
+      format.json {
+        render json: @idea = Idea.find(params[:id])
+      }
+    end
   end
 
   def create
