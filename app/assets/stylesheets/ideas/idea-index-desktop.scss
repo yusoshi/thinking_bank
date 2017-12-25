@@ -28,6 +28,17 @@
         &__edit-and-delete img {
           margin-left: 20px;
         }
+        &__form-area {
+          &__btn-area {
+          width: 100%;
+            &__x-btn {
+              float: right;
+              margin-top: 20px;
+              width: 30px!important;
+              height: 30px!important;
+            }
+          }
+        }
       }
     }
   }
