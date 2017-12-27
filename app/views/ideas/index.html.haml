@@ -8,7 +8,11 @@
   .outline.idea-index-outline
     .content
       .content__index-sub-menu.mobile-none
-        .content__index-sub-menu__latest-memos-area
+        %ul{ class: 'content__index-sub-menu__latest-memos-area' }
+          .content__index-sub-menu__latest-memos-area__area-title-area
+            .square
+            %h3{ class: 'content__index-sub-menu__latest-memos-area__area-title__area-title' }最近の思考
+          = render partial: 'latest_idea', collection: @latest_ideas
         .content__index-sub-menu__calendar-area
       .content__main.non-border.non-padding
         = form_for @idea, html: { class: "content__main__writing-area" } do |f|
