@@ -1,9 +1,13 @@
-.second-header.desktop-none
+.second-header.desktop-none#second-head
   %ul{ class: "second-header__icon-area" }
-    %li{ class: "second-header__icon-area__calendar-area" }
-      = link_to image_tag('header/calendar.png'), ''
     %li{ class: "second-header__icon-area__latest-memos-area" }
       = link_to image_tag('header/latest-memos.png'), ''
+    %li{ class: "second-header__icon-area__calendar-area" }
+      = link_to image_tag('header/calendar.png'), ''
+  %ul{ class:'second-header__latest-memos-area', id: 'latest-memos-area' }
+    .second-header__latest-memos-area__area-title-area
+      %h3{class: 'second-header__latest-memos-area__area-title-area__title'}最近の思考
+    = render partial: 'latest_idea_mobile', collection: @latest_ideas
 .wrapper
   .outline.idea-index-outline
     .content
@@ -12,7 +16,7 @@
           .content__index-sub-menu__latest-memos-area__area-title-area
             .square
             %h3{ class: 'content__index-sub-menu__latest-memos-area__area-title__area-title' }最近の思考
-          = render partial: 'latest_idea', collection: @latest_ideas
+          = render partial: 'latest_idea_desktop', collection: @latest_ideas
         .content__index-sub-menu__calendar-area
       .content__main.non-border.non-padding
         = form_for @idea, html: { class: "content__main__writing-area" } do |f|
