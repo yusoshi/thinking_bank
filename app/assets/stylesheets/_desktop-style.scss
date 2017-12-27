@@ -45,7 +45,7 @@ a {
 }
 
 a:hover {
-  color: #000000;
+  color: #9B9B9B;
 }
 
 li {
@@ -130,6 +130,10 @@ input:-moz-placeholder {
   background-color: $main-color;
   float: left;
   margin-right: 6px;
+}
+
+.square-white {
+  background-color: #fff;
 }
 
 
