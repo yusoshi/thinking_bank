@@ -17,9 +17,16 @@
       }
     }
     &__calendar-area {
-      height: 100px;
       padding: 10px 10px;
       border: solid 1px #ddd;
+      &__calender {
+        width: 100%;
+        margin-left: 6px;
+      }
+      &__calender caption {
+        text-align: center;
+        margin-bottom: 10px;
+      }
     }
   }
 }

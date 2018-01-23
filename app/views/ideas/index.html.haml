@@ -18,6 +18,44 @@
             %h3{ class: 'content__index-sub-menu__latest-memos-area__area-title__area-title' }最近の思考
           = render partial: 'latest_idea_desktop', collection: @latest_ideas
         .content__index-sub-menu__calendar-area
+          %table{ class: "content__index-sub-menu__calendar-area__calender"}
+            %caption
+              = @today.strftime("%Y年%m月")
+            %tr
+              %th{ id: "sunday" }
+                日
+              %th
+                月
+              %th
+                火
+              %th
+                水
+              %th
+                木
+              %th
+                金
+              %th{ id: "saturday" }
+                土
+            - 1.upto(5).each do |i|
+              %tr
+                - (@d..@d.end_of_week(:sunday)).each do |c|
+                - flag = 0
+                  %th
+                    - if c.strftime('%m') == @month
+                      - @current_month_ideas.each do |current_month_idea|
+                        - updated_at_of_current_month_idea = current_month_idea.updated_at.to_s
+                        - only_date_of_current_month_idea = updated_at_of_current_month_idea[8..9]
+                        - if c.strftime('%d').to_s == only_date_of_current_month_idea
+                          - flag = 1
+                          - break
+                      - if flag == 1
+                        = link_to c.strftime('%d'), root_path
+                      - else
+                        = c.strftime('%d')
+                    - else
+                      = "  "
+              - @d = @d + 1.week
+              / 表示されているカレンダーの月のideaをすべて取得し、ideaがある日をリンクにする。
       .content__main.non-border.non-padding
         = form_for @idea, html: { class: "content__main__writing-area" } do |f|
           .content__main__writing-area__title-area
