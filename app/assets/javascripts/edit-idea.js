@@ -1,3 +1,4 @@
+// 非同期でideaを編集する。
 $(function() {
 
   // funtion切り出し場

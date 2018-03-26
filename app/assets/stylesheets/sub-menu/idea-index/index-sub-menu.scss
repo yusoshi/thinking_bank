@@ -21,9 +21,19 @@
       padding: 10px 10px;
       border: solid 1px #ddd;
       width: 100%;
-      &__calender {
+      position: relative;
+      height: 180px;
+      &__calendar {
         width: 100%;
-        margin: 0 auto;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        &__yajirushi img {
+          width: 14px;
+          display: inline-block;
+          position: relative;
+          z-index: 100;
+        }
       }
       &__calender caption {
         text-align: center;
@@ -31,4 +41,12 @@
       }
     }
   }
+}
+
+#back_month {
+  float: left;
+}
+
+#forward_month {
+  float: right;
 }

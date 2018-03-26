@@ -1,3 +1,4 @@
+// 非同期でideaを保存する。
 $(function() {
   // ideaがsubmitされたら非同期通信を行う
   $('#new_idea').on('submit', function(e) {

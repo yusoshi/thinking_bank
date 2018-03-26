@@ -1,3 +1,4 @@
+// トグルオープン
 $(function() {
     $(".toggle-area").on("click", function(e) {
         e.preventDefault();

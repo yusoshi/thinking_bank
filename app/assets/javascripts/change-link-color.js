@@ -1,3 +1,4 @@
+// ユーザー設定で今いるページへのリンクの色を変える。
 $(document).ready(function() {
   var current_url = location.href;
 
