@@ -71,17 +71,18 @@ class IdeasController < ApplicationController
   end
 
   def show_selected_calendar(captionMonth, monthSelect)
-  # 前月を見るときの@todayを定義
     if monthSelect == 'current'
       @today = Date.today
     elsif monthSelect == 'back'
+    # 前月を見るときの@todayを定義
       @today = Date.strptime(captionMonth, '%Y-%m-%d') - 1.month
+    # 次月を見るときの@todayを定義しましょう。
     elsif monthSelect == 'forward'
       @today = Date.strptime(captionMonth, '%Y-%m-%d') + 1.month
     end
-  # 次月を見るときの@todayを定義しましょう。
+
     @month = @today.strftime("%m")
-  # @d = 今月の最初の日付が所属する週の最初の日付データ
+  # @dは月の最初の日付が所属する週の最初の日付データ
     @d = @today.at_beginning_of_month.at_beginning_of_week(:sunday)
 
   # 今月のideaを取得
