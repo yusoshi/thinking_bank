@@ -66,6 +66,27 @@ $(function() {
 
 
   // 次の月を見るためのパーツがクリックされたら、次の月のカレンダーを表示
+  $(document).on('click', '#forward_month', function(e) {
+    e.preventDefault();
+    var captionMonth = $('#caption').attr('data-caption-month');
+    var monthSelect = 'forward';
+
+    $.ajax({
+      type: 'GET',
+      url: '/ideas.json',
+      data: {
+        captionMonth: captionMonth,
+        monthSelect: monthSelect
+      }
+    })
+    .done(function(currentMonthIdeasWithOtherInfo) {
+      buildCalendar(currentMonthIdeasWithOtherInfo, captionMonth)
+    })
+    .fail(function() {
+      alert('カレンダーの表示に失敗しました。ページを更新してもう一度試してください。')
+    })
+    return false;
+  })
   // 前の月を見るためのパーツがクリックされたら、次の月のカレンダーを表示
   $(document).on('click', '#back_month', function(e) {
     e.preventDefault();

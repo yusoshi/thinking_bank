@@ -71,6 +71,8 @@ class IdeasController < ApplicationController
       @today = Date.today
     elsif monthSelect == 'back'
       @today = Date.strptime(captionMonth, '%Y-%m-%d') - 1.month
+    elsif monthSelect == 'forward'
+      @today = Date.strptime(captionMonth, '%Y-%m-%d') + 1.month
     end
   # 次月を見るときの@todayを定義しましょう。
     @month = @today.strftime("%m")
