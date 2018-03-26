@@ -55,11 +55,9 @@ $(function() {
       // その週の最後の日付を取得したい！！！！
       var last = new Date(d.setDate(d.getDate() + 6))
       d = new Date(d.setDate(d.getDate() - 6))
-      console.log(d, last)
 
       // その日がその月に所属しているかどうかを調べる
       checkMonth(range(d, last), month, tbody);
-      console.log(String(d).slice(8, 10), weekCount)
     }
 }
 
