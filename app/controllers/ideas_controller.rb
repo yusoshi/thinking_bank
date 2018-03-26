@@ -9,7 +9,12 @@ class IdeasController < ApplicationController
         show_selected_calendar('', monthSelect)
       }
       format.json {
-        render json: show_selected_calendar(params[:captionMonth], params[:monthSelect])
+        if params[:flag] == "edit-cancel"
+          @idea = Idea.find(params[:id])
+          render json: @idea
+        else
+          render json: show_selected_calendar(params[:captionMonth], params[:monthSelect])
+        end
       }
     end
   end

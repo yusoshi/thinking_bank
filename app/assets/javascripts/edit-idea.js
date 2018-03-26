@@ -49,7 +49,8 @@ $(function() {
     $.ajax({
       type: 'GET',
       url: '/ideas.json',
-      data: {id: id}
+      data: {id: id,
+             flag: "edit-cancel"}
     })
     .done(function(idea) {
       buildHTML(idea, selectedMemoArea);
