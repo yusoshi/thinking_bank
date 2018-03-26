@@ -12,14 +12,29 @@ $(function() {
     return daysOfWeek;
   }
 
-  // その日がその月に所属しているか調べる
-  function checkMonth(daysOfWeek, month, tbody) {
+  // その日がその月に所属しているか調べる＆アイデアへのリンク
+  function checkMonth(daysOfWeek, month, tbody, currentMonthIdeas, flag) {
     var numberMonth = Number(month);
     var rowOfAWeek = $('<tr></tr>');
     for (var dayCount = 0; dayCount <= 6; dayCount++) {
       var day = daysOfWeek[dayCount];
       if (day.getMonth() + 1 == numberMonth) {
-        rowOfAWeek.append('<th>' + String(day).slice(8, 10) + '</th>');
+        // アイデアが存在する日付があればリンクを設定する
+        var countOfIdeas = currentMonthIdeas.length;
+        for (var ideaCount = 0; ideaCount < countOfIdeas; ideaCount++) {
+          var idea = currentMonthIdeas[ideaCount];
+          // ideaのupdated_atとカレンダーの日付があっていれば、flagを1に設定し、ループを抜ける
+          if (idea.updated_at.slice(8, 10) == String(day).slice(8, 10)) {
+            flag = 1;
+            break;
+          }
+        }
+          if (flag == 1) {
+            rowOfAWeek.append('<th>' + '<a href="/" >' + String(day).slice(8, 10) + '</a>' + '</th>');
+            flag = 0;
+          } else {
+            rowOfAWeek.append('<th>' + String(day).slice(8, 10) + '</th>');
+          }
       } else {
         rowOfAWeek.append('<th>  </th>');
       }
@@ -50,14 +65,15 @@ $(function() {
     // 5週分繰り返す
     var tbody = document.getElementsByTagName('tbody')[0];
     for (var weekCount = 0; weekCount < 6; weekCount++) {
+      var flag = 0;
       var preD = new Date(currentMonthIdeasWithOtherInfo[3]);
       var d = new Date(preD.setDate(preD.getDate() + 7 * weekCount));
       // その週の最後の日付を取得したい！！！！
       var last = new Date(d.setDate(d.getDate() + 6))
       d = new Date(d.setDate(d.getDate() - 6))
 
-      // その日がその月に所属しているかどうかを調べる
-      checkMonth(range(d, last), month, tbody);
+      // その日がその月に所属しているかどうかを調べる＆アイデアへのリンク
+      checkMonth(range(d, last), month, tbody, currentMonthIdeas, flag);
     }
 }
 
