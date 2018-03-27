@@ -59,8 +59,8 @@ $(function() {
     var currentMonthIdeas = currentMonthIdeasWithOtherInfo[0];
     var month = currentMonthIdeasWithOtherInfo[2];
     $('.content__index-sub-menu__calendar-area__calendar').remove();
-    $('#back_month').remove();
-    $('#forward_month').remove();
+    $('.content__index-sub-menu__calendar-area__calendar__yajirushi').remove();
+    $('.content__index-sub-menu__calendar-area__calendar__yajirushi').remove();
 
 
     // 表示したい月のカレンダーを表示する。
@@ -104,15 +104,6 @@ $(function() {
   $(document).on('click', '#forward_month', function(e) {
     e.preventDefault();
     var captionMonth = $('#caption').attr('data-caption-month');
-    // var now = new Date();
-    // var dateCaptionMonth = new Date(captionMonth)
-    // var dateCaptionMonthPlusOneMonth = new Date(dateCaptionMonth.setMonth(dateCaptionMonth.getMonth() + 1));
-    // var dateCaptionMonth = new Date(captionMonth);
-    // var a = String(dateCaptionMonthPlusOneMonth).slice(11, 15) + String(dateCaptionMonthPlusOneMonth).slice(4, 8);
-    // var b = String(new Date(now.setDate(now.getMonth()))).slice(11, 15) + String(new Date(now.setDate(now.getMonth()))).slice(4, 8)
-    // if ( a == b ) {
-    //   var monthSelect = 'current';
-    // } else {
     var monthSelect = 'forward';
     // }
 
