@@ -41,6 +41,9 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'activesupport'
 
+# ideaをスクロールに応じて表示する機能
+gem 'kaminari'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
