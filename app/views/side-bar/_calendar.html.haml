@@ -1,0 +1,41 @@
+%table{ class: "content__index-sub-menu__calendar-area__calendar"}
+  .content__index-sub-menu__calendar-area__calendar__yajirushi#back_month
+    = link_to image_tag('yajirushi_left'), ''
+  %caption{ id: 'caption', 'data-caption-month': "#{@today}" }
+    = @today.strftime("%Y年%m月")
+  .content__index-sub-menu__calendar-area__calendar__yajirushi#forward_month
+    = link_to image_tag('yajirushi_right'), ''
+    %tr
+      %th{ id: "sunday" }
+        日
+      %th
+        月
+      %th
+        火
+      %th
+        水
+      %th
+        木
+      %th
+        金
+      %th{ id: "saturday" }
+        土
+    - 1.upto(5).each do |i|
+      %tr
+        - (@d..@d.end_of_week(:sunday)).each do |c|
+        - flag = 0
+          %th
+            - if c.strftime('%m') == @month
+              - @current_month_ideas.each do |current_month_idea|
+                - updated_at_of_current_month_idea = current_month_idea.updated_at.to_s
+                - only_date_of_current_month_idea = updated_at_of_current_month_idea[8..9]
+                - if c.strftime('%d').to_s == only_date_of_current_month_idea
+                  - flag = 1
+                  - break
+              - if flag == 1
+                = link_to c.strftime('%d'), root_path
+              - else
+                = c.strftime('%d')
+            - else
+              = "  "
+      - @d = @d + 1.week
