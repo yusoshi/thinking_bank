@@ -62,8 +62,35 @@
       padding: 10px 0;
       border-bottom: solid 1px #fff;
     }
+    &__calendar-area {
+      position: absolute;
+      height: 190px;
+      top: -1000px;
+      left: 0;
+      font-size: 16px;
+      background-color: #333;
+      width: 100%;
+      color: #fff;
+      display: block!important;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+    }
+    &__calendar-area a {
+      width: 90%;
+      display: block;
+      font-weight: 500;
+      color: yellow;
+      margin: 0 auto;
+    }
   }
-  .open #latest-memos-area {
+  .open-latest-memos #latest-memos-area {
+    -moz-transform: translateY(1050px);
+    -webkit-transform: translateY(1050px);
+    transform: translateY(1050px);
+  }
+
+  .open-calendar #calendar-area {
     -moz-transform: translateY(1050px);
     -webkit-transform: translateY(1050px);
     transform: translateY(1050px);

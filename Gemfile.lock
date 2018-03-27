@@ -199,6 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   byebug
   coffee-rails (~> 4.2)
   devise

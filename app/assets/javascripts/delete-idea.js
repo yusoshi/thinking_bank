@@ -1,3 +1,4 @@
+// 非同期でideaを削除する。
 $(function() {
   $(document).on('click', '.content__main__memos-area__memo-area__edit-and-delete__delete', function(e) {
     e.preventDefault();

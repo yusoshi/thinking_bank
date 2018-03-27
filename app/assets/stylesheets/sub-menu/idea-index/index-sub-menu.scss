@@ -17,9 +17,36 @@
       }
     }
     &__calendar-area {
-      height: 100px;
+      display: inline-block;
       padding: 10px 10px;
       border: solid 1px #ddd;
+      width: 100%;
+      position: relative;
+      height: 180px;
+      &__calendar {
+        width: 100%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        &__yajirushi img {
+          width: 14px;
+          display: inline-block;
+          position: relative;
+          z-index: 100;
+        }
+      }
+      &__calender caption {
+        text-align: center;
+        margin-bottom: 10px;
+      }
     }
   }
+}
+
+#back_month {
+  float: left;
+}
+
+#forward_month {
+  float: right;
 }

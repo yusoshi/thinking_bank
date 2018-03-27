@@ -8,6 +8,8 @@
     .second-header__latest-memos-area__area-title-area
       %h3{class: 'second-header__latest-memos-area__area-title-area__title'}最近の思考
     = render partial: 'latest_idea_mobile', collection: @latest_ideas
+  .second-header__calendar-area{ id: 'calendar-area' }
+    = render partial: 'side-bar/calendar'
 .wrapper
   .outline.idea-index-outline
     .content
@@ -18,6 +20,7 @@
             %h3{ class: 'content__index-sub-menu__latest-memos-area__area-title__area-title' }最近の思考
           = render partial: 'latest_idea_desktop', collection: @latest_ideas
         .content__index-sub-menu__calendar-area
+          = render partial: 'side-bar/calendar'
       .content__main.non-border.non-padding
         = form_for @idea, html: { class: "content__main__writing-area" } do |f|
           .content__main__writing-area__title-area
