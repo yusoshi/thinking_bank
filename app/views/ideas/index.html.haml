@@ -32,3 +32,4 @@
             = f.submit "保存", class: "content__main__writing-area__btn-area__btn btn btn-main full-width-btn"
         %ul{ class: "content__main__memos-area" }
           = render @ideas
+          = paginate @ideas, window: 2
