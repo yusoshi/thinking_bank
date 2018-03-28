@@ -43,3 +43,30 @@
     }
   }
 }
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page, .next, .last, .first, .prev {
+  margin: 0 3px;
+  text-align: right;
+}
+
+.page a, .next a, .last a, .first a, .prev a {
+  text-decoration: none;
+  padding: 6px;
+  border: solid 1px #ddd;
+}
+
+.gap {
+  display: none;
+}
+
+.current {
+  background-color: #4A4A4A;
+  color: #fff;
+  border: solid 1px #4A4A4A;
+  padding: 6px;
+}

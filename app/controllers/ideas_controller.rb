@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
+    @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user).page(params[:page]).per(10)
     @latest_ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).limit(10).includes(:user)
     @idea = Idea.new
     respond_to do |format|
