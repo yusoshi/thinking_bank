@@ -35,18 +35,17 @@
           z-index: 100;
         }
       }
-      &__calender caption {
+      &__calendar caption {
         text-align: center;
-        margin-bottom: 10px;
       }
     }
   }
 }
 
-#back_month {
+.back_month {
   float: left;
 }
 
-#forward_month {
+.forward_month {
   float: right;
 }
