@@ -14,7 +14,7 @@ $(function() {
   }
 
   // その日がその月に所属しているか調べる＆アイデアへのリンク
-  function checkMonth(daysOfWeek, month, tbody, currentMonthIdeas, flag) {
+  function checkMonth(daysOfWeek, month, currentMonthIdeas, flag) {
     var numberMonth = Number(month);
     var rowOfAWeek = $('<tr></tr>');
     for (var dayCount = 0; dayCount <= 6; dayCount++) {
@@ -41,8 +41,10 @@ $(function() {
         rowOfAWeek.append('<th>  </th>');
       }
     }
-    tbody.append(rowOfAWeek[0]);
-    return;
+
+    var cloneRowOfAweek = rowOfAWeek.clone(true)
+    $('.second-header__calendar-area__calendar tbody').append(cloneRowOfAweek[0]);
+    $('.content__index-sub-menu__calendar-area__calendar tbody').append(rowOfAWeek[0]);
   }
 
   // カレンダーのHTMLを組み立てる
@@ -50,7 +52,8 @@ $(function() {
 
     // jsでカレンダー組み立てようね。
     // 現在表示されているカレンダーを消す
-    var calendarArea = $('.content__index-sub-menu__calendar-area');
+    var calendarAreaDesktop = $('.content__index-sub-menu__calendar-area');
+    var calendarAreaMobile = $('.second-header__calendar-area');
     var today = currentMonthIdeasWithOtherInfo[1];
     var regToday = today.match(/(\d\d\d\d)-(\d\d)/);
     var selectedYear = regToday[1];
@@ -58,17 +61,25 @@ $(function() {
 
     var currentMonthIdeas = currentMonthIdeasWithOtherInfo[0];
     var month = currentMonthIdeasWithOtherInfo[2];
+
+    // desktop版カレンダーのremove
     $('.content__index-sub-menu__calendar-area__calendar').remove();
     $('.content__index-sub-menu__calendar-area__calendar__yajirushi').remove();
     $('.content__index-sub-menu__calendar-area__calendar__yajirushi').remove();
 
+    // mobile版カレンダーのremove
+    $('.second-header__calendar-area__calendar').remove();
+    $('.second-header__calendar-area__calendar__yajirushi').remove();
+    $('.second-header__calendar-area__calendar__yajirushi').remove();
 
-    // 表示したい月のカレンダーを表示する。
-    var tableWithDayOfTheWeek = calendarArea.prepend('<table class="content__index-sub-menu__calendar-area__calendar"><div class="content__index-sub-menu__calendar-area__calendar__yajirushi" id="back_month"><a><img src="assets/yajirushi_left"></a></div><caption id="caption" data-caption-month=' + today + '>' + selectedYear + '年' + selectedMonth + '月' + '</caption><div class="content__index-sub-menu__calendar-area__calendar__yajirushi" id="forward_month"><a><img src="assets/yajirushi_right"></a></div><tr><th id="sunday">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th id="suturday">土</th></tr></table>');
+
+        // 表示したい月のカレンダーを表示する。
+    calendarAreaDesktop.prepend('<table class="content__index-sub-menu__calendar-area__calendar"><div class="content__index-sub-menu__calendar-area__calendar__yajirushi back_month"><a><img src="assets/yajirushi_left"></a></div><caption class="caption" data-caption-month=' + today + '>' + selectedYear + '年' + selectedMonth + '月' + '</caption><div class="content__index-sub-menu__calendar-area__calendar__yajirushi forward_month"><a><img src="assets/yajirushi_right"></a></div><tr><th id="sunday">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th id="suturday">土</th></tr></table>');
+
+    calendarAreaMobile.prepend('<table class="second-header__calendar-area__calendar"><div class="second-header__calendar-area__calendar__yajirushi back_month"><a><img src="assets/yajirushi_left_white"></a></div><caption class="caption" data-caption-month=' + today + '>' + selectedYear + '年' + selectedMonth + '月' + '</caption><div class="second-header__calendar-area__calendar__yajirushi forward_month"><a><img src="assets/yajirushi_right_white"></a></div><tr><th id="sunday">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th id="suturday">土</th></tr></table>');
 
     // 日付の実装
     // 5週分繰り返す
-    var tbody = document.getElementsByTagName('tbody')[0];
     for (var weekCount = 0; weekCount < 6; weekCount++) {
       var flag = 0;
       var preD = new Date(currentMonthIdeasWithOtherInfo[3]);
@@ -78,7 +89,7 @@ $(function() {
       d = new Date(d.setDate(d.getDate() - 6));
 
       // その日がその月に所属しているかどうかを調べる＆アイデアへのリンク
-      checkMonth(range(d, last), month, tbody, currentMonthIdeas, flag);
+      checkMonth(range(d, last), month, currentMonthIdeas, flag);
     }
   }
 
@@ -101,9 +112,9 @@ $(function() {
 
 
   // 次の月を見るためのパーツがクリックされたら、次の月のカレンダーを表示
-  $(document).on('click', '#forward_month', function(e) {
+  $(document).on('click', '.forward_month', function(e) {
     e.preventDefault();
-    var captionMonth = $('#caption').attr('data-caption-month');
+    var captionMonth = $('.caption').attr('data-caption-month');
     var monthSelect = 'forward';
     // }
 
@@ -111,9 +122,9 @@ $(function() {
     return false;
   })
   // 前の月を見るためのパーツがクリックされたら、次の月のカレンダーを表示
-  $(document).on('click', '#back_month', function(e) {
+  $(document).on('click', '.back_month', function(e) {
     e.preventDefault();
-    var captionMonth = $('#caption').attr('data-caption-month');
+    var captionMonth = $('.caption').attr('data-caption-month');
     var monthSelect = 'back';
 
     ajax(captionMonth, monthSelect);

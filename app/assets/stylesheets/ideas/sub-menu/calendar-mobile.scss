@@ -1,0 +1,51 @@
+@media(max-width: 414px) {
+  .second-header {
+    &__calendar-area {
+      position: absolute;
+      height: 230px;
+      top: -1000px;
+      left: 0;
+      font-size: 16px;
+      background-color: #333;
+      width: 100%;
+      color: #fff;
+      display: block!important;
+      padding: 10px;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      &__calendar {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &__yajirushi img {
+          width: 14px;
+          display: inline-block;
+          position: relative;
+          z-index: 100;
+          margin-top: 4px;
+        }
+      }
+      &__calendar caption {
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: black;
+        height: 50px;
+        padding-top: 14px;
+      }
+    }
+    &__calendar-area a {
+      width: 90%;
+      display: block;
+      font-weight: 500;
+      color: yellow;
+      margin: 0 auto;
+    }
+  }
+  .open-calendar .calendar-area {
+    -moz-transform: translateY(1050px);
+    -webkit-transform: translateY(1050px);
+    transform: translateY(1050px);
+  }
+}

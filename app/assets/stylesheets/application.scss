@@ -16,19 +16,16 @@
 // ideas
   // index
   @import './ideas/idea-index-desktop';
-  @import './ideas/idea-index-mobile';
 
   // メモ書き込み
   @import './ideas/writing-area-desktop';
   @import './ideas/writing-area-mobile';
 
-// サブメニュー
-  // 設定のサブメニュー
-  @import './sub-menu/setting/setting-sub-menu-desktop';
-  @import './sub-menu/setting/setting-sub-menu-mobile';
-
-  // トップページのサブメニュー
-  @import './sub-menu/idea-index/index-sub-menu';
+  // サブメニュー
+  @import './ideas/sub-menu/index-sub-menu';
+  // mobile表示
+  @import './ideas/sub-menu/latest-memos-mobile';
+  @import './ideas/sub-menu/calendar-mobile';
 
 // ユーザー管理系
   // サインアップとイン
@@ -40,3 +37,7 @@
   // ユーザー設定の編集
   @import "./users/desktop-setting";
   @import "./users/mobile-setting";
+
+  // サブメニュー
+   @import './users/sub-menu/setting-sub-menu-desktop';
+  @import './users/sub-menu/setting-sub-menu-mobile';
