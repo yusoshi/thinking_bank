@@ -16,6 +16,7 @@
 // ideas
   // index
   @import './ideas/idea-index-desktop';
+  @import './ideas/idea-index-mobile';
 
   // メモ書き込み
   @import './ideas/writing-area-desktop';
@@ -24,6 +25,7 @@
   // サブメニュー
   @import './ideas/sub-menu/index-sub-menu';
   // mobile表示
+  @import './ideas/sub-menu/second-header';
   @import './ideas/sub-menu/latest-memos-mobile';
   @import './ideas/sub-menu/calendar-mobile';
 

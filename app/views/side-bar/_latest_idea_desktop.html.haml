@@ -1,2 +1,3 @@
 %li{ class: "content__index-sub-menu__latest-memos-area__title-area" }
-  = link_to latest_idea_desktop.title, '', class: "content__index-sub-menu__latest-memos-area__title-area__title non-deco"
+  - index = Idea.define_num_of_page(latest_idea_desktop.id, @all_ideas)
+  = link_to latest_idea_desktop.title, "/?page=#{ (index.to_f / per.to_f).ceil }##{ latest_idea_desktop.id }", class: "content__index-sub-menu__latest-memos-area__title-area__title non-deco"

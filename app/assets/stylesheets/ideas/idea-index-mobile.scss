@@ -1,0 +1,16 @@
+@media(max-width: 414px) {
+  .content {
+    &__main {
+      &__memos-area {
+        &__memo-area {
+          padding: 10px 0;
+          margin-bottom: 10px;
+          border-bottom: solid #ddd 1px;
+          overflow: auto;
+          margin-top: -100px;
+          padding-top: 100px;
+        }
+      }
+    }
+  }
+}

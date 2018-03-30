@@ -1,9 +1,11 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user).page(params[:page]).per(10)
-    @ideas_for_calendar = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user).page(params[:page])
+    @per = 10
+    @ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user).page(params[:page]).per(@per)
+    @all_ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).includes(:user)
     @latest_ideas = Idea.where(user_id: current_user).order(updated_at: :DESC).limit(10).includes(:user)
     @idea = Idea.new
+    @index_for_desktop = 0;
     respond_to do |format|
       format.html {
         monthSelect = 'current'
@@ -95,7 +97,7 @@ class IdeasController < ApplicationController
 
 
     i = 0
-    @ideas_for_calendar.each do |idea|
+    @all_ideas.each do |idea|
     # ideaが今月のものであるか？
       if idea.updated_at.to_s.match(/#{month_of_current_year.to_s}/)
        # 今月のideaは最新のものを1個のみ取得する
