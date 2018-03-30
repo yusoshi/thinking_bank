@@ -1,8 +1,6 @@
-$header-height: 70px;
-
 .header-wrapper {
   &__header {
-    height: $header-height;
+    height: 70px;
     display: table;
     padding: 0 40px;
     width: 100%;

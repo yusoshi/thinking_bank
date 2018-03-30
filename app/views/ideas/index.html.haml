@@ -7,7 +7,7 @@
   %ul{ class:'second-header__latest-memos-area', id: 'latest-memos-area' }
     .second-header__latest-memos-area__area-title-area
       %h3{class: 'second-header__latest-memos-area__area-title-area__title'}最近の思考
-    = render partial: 'side-bar/latest_idea_mobile', collection: @latest_ideas
+    = render partial: 'side-bar/latest_idea_mobile', collection: @latest_ideas, locals: { per: @per }
   .second-header__calendar-area.calendar-area
     = render partial: 'side-bar/calendar_mobile'
 .wrapper
@@ -18,7 +18,7 @@
           .content__index-sub-menu__latest-memos-area__area-title-area
             .square
             %h3{ class: 'content__index-sub-menu__latest-memos-area__area-title__area-title' }最近の思考
-          = render partial: 'side-bar/latest_idea_desktop', collection: @latest_ideas, locals: { index_for_desktop: @index_for_desktop + 1, per: @per }
+          = render partial: 'side-bar/latest_idea_desktop', collection: @latest_ideas, locals: { per: @per }
         .content__index-sub-menu__calendar-area.calendar-area
           = render partial: 'side-bar/calendar_desktop'
       .content__main.non-border.non-padding
