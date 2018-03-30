@@ -7,6 +7,8 @@
         margin-bottom: 10px;
         border-bottom: solid #ddd 1px;
         overflow: auto;
+        margin-top: -$header-height;
+        padding-top: $header-height;
         &__title-area {
           &__title {
             margin-bottom: 4px!important;

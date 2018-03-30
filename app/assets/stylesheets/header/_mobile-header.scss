@@ -1,7 +1,9 @@
 @media (max-width: 414px) {
+  $header-height: 50px;
+
   .header-wrapper {
     &__header {
-      height: 50px;
+      height: $header-height;
       padding: 0 10px;
       border: none;
       &__left {
