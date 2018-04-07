@@ -118,6 +118,6 @@ class IdeasController < ApplicationController
         end
       end
     end
-    return @current_month_ideas, @today, @month, @d
+    return @current_month_ideas, @today, @month, @d, @all_ideas, @per
   end
 end

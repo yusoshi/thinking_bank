@@ -13,12 +13,24 @@ $(function() {
     return daysOfWeek;
   }
 
+  // ideaが所属しているページ数を表す変数indexを割り出す
+  function define_num_of_page(id, allIdeas) {
+    for (var number = 1; number <= allIdeas.length; number++) {
+      if (id == allIdeas[number - 1].id) {
+        return number;
+      }
+    }
+  }
+
   // その日がその月に所属しているか調べる＆アイデアへのリンク
-  function checkMonth(daysOfWeek, month, currentMonthIdeas, flag) {
+  function checkMonth(daysOfWeek, month, currentMonthIdeas, flag, currentMonthIdeasWithOtherInfo) {
     var numberMonth = Number(month);
     var rowOfAWeek = $('<tr></tr>');
+    var per = currentMonthIdeasWithOtherInfo[5];
     for (var dayCount = 0; dayCount <= 6; dayCount++) {
       var day = daysOfWeek[dayCount];
+      var index = 0;
+      var id = 0;
       if (day.getMonth() + 1 == numberMonth) {
         // アイデアが存在する日付があればリンクを設定する
         var countOfIdeas = currentMonthIdeas.length;
@@ -27,12 +39,14 @@ $(function() {
           var idea = currentMonthIdeas[ideaCount];
           // ideaのupdated_atとカレンダーの日付があっていれば、flagを1に設定し、ループを抜ける
           if (idea.updated_at.slice(8, 10) == String(day).slice(8, 10)) {
+            index = define_num_of_page(idea.id, currentMonthIdeasWithOtherInfo[4]);
+            id = idea.id;
             flag = 1;
             break;
           }
         }
           if (flag == 1) {
-            rowOfAWeek.append('<th>' + '<a href="/" >' + String(day).slice(8, 10) + '</a>' + '</th>');
+            rowOfAWeek.append('<th>' + '<a href="/?page=' + Math.ceil(index / per) + '#' + id + '">' + String(day).slice(8, 10) + '</a>' + '</th>');
             flag = 0;
           } else {
             rowOfAWeek.append('<th>' + String(day).slice(8, 10) + '</th>');
@@ -89,7 +103,7 @@ $(function() {
       d = new Date(d.setDate(d.getDate() - 6));
 
       // その日がその月に所属しているかどうかを調べる＆アイデアへのリンク
-      checkMonth(range(d, last), month, currentMonthIdeas, flag);
+      checkMonth(range(d, last), month, currentMonthIdeas, flag, currentMonthIdeasWithOtherInfo);
     }
   }
 
