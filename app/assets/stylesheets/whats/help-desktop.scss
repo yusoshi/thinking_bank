@@ -1,0 +1,50 @@
+.content {
+  &__main {
+    &__wrapper {
+      padding-bottom: 40px;
+      &__top {
+        border-bottom: solid 1px #ddd;
+        &__title {
+          margin-bottom: 20px;
+        }
+        &__idea-area {
+          margin-bottom: 20px;
+          &__title {
+          }
+          &__link-area {
+            margin-left: 20px;
+          }
+        }
+        &__account-area {
+          margin-bottom: 20px;
+          &__title {
+            margin-bottom: 20px;
+          }
+          &__link-area {
+            margin-left: 20px;
+          }
+        }
+      }
+      &__top a {
+        text-decoration: none;
+      }
+      &__idea {
+        margin-top: 20px;
+        &__title {
+        }
+        &__save {
+          &__title {
+          }
+        }
+      }
+      &__account {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.one-help-unit {
+  margin-top: -70px;
+  padding-top: 70px;
+}

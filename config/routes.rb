@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   root 'ideas#index'
 
   resources :ideas, except: [:new, :edit, :show]
+
   get 'whats/thinking_bank', to: 'whats#thinking_bank'
+  get 'whats/help', to: 'whats#help'
 end

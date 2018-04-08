@@ -17,4 +17,9 @@ $(document).ready(function() {
     var object = $('#whats_thinking_bank');
     emphasize(object);
   }
+
+  if ( /whats\/help/.test(current_url)) {
+    var object = $('#help');
+    emphasize(object);
+  }
 });
