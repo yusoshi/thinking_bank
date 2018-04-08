@@ -41,5 +41,11 @@
   @import "./users/mobile-setting";
 
   // サブメニュー
-   @import './users/sub-menu/setting-sub-menu-desktop';
+  @import './users/sub-menu/setting-sub-menu-desktop';
   @import './users/sub-menu/setting-sub-menu-mobile';
+
+  // whats
+  @import './whats/thinking-bank-desktop';
+  @import './whats/thinking-bank-mobile';
+
+  @import './whats/help-desktop';

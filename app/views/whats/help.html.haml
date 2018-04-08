@@ -1,0 +1,80 @@
+.wrapper
+  .outline
+    .content
+      = render 'side-bar/what'
+      .content__main
+        .content__main__wrapper
+          .content__main__wrapper__top
+            %h2{ class: 'content__main__wrapper__top__title font-weight600' }使い方
+            %ul{ class: 'content__main__wrapper__top__idea-area' }
+              %h3{ class: 'content__main__wrapper__top__idea-area__title font-weight600' }アイデア
+              %li{ class: 'content__main__wrapper__top__idea-area__link-area' }
+                = link_to 'アイデアを貯める', '#idea-save'
+              %li{ class: 'content__main__wrapper__top__idea-area__link-area' }
+                = link_to 'アイデアを編集する', '#idea-edit'
+              %li{ class: 'content__main__wrapper__top__idea-area__link-area' }
+                = link_to 'アイデアを削除する', '#idea-delete'
+              %li{ class: 'content__main__wrapper__top__idea-area__link-area' }
+                = link_to 'アイデアを見る', '#idea-see'
+            %ul{ class: 'content__main__wrapper__top__account-area' }
+              %h3{ class: 'content__main__wrapper__top__account-area__title font-weight600' }アカウント
+              %li{ class: 'content__main__wrapper__top__account-area__link-area' }
+                = link_to 'アカウントを変更する', '#account-change-name'
+              %li{ class: 'content__main__wrapper__top__account-area__link-area' }
+                = link_to 'メールアドレスを変更する', '#account-change-email'
+              %li{ class: 'content__main__wrapper__top__account-area__link-area' }
+                = link_to 'パスワードを変更する', '#account-change-password'
+              %li{ class: 'content__main__wrapper__top__account-area__link-area' }
+                = link_to 'アカウントを削除する', '#account-delete'
+          .content__main__wrapper__idea
+            %h3{ class: "content__main__wrapper__idea__title font-weight600" }アイデア
+            .content__main__wrapper__idea__save.one-help-unit#idea-save
+              %h4{ class: "content__main__wrapper__idea__save__title font-weight600" }アイデアを貯める
+              %p{ class: 'content__main__wrapper__idea__save__text'}
+                　
+                = link_to 'トップページ', root_path
+                上部のフォームに「アイデアのタイトル」「アイデアの内容のメモ」を入力し、「保存」ボタンを押してください。<br>
+            .content__main__wrapper__idea__edit.one-help-unit#idea-edit
+              %h4{ class: "content__main__wrapper__idea__edit__title font-weight600" }アイデアを編集する
+              %p{ class: 'content__main__wrapper__idea__edit__text'}
+                　アイデアスペースにある
+                = image_tag('icon-for-memo-area/edit.png')
+                アイコンを押すと、アイデアの編集フォームが表示されます。アイデアの編集が終了したら、「保存」ボタンを押してください。アイデアが最終更新日とともに更新されます。
+            .content__main__wrapper__idea__delete.one-help-unit#idea-delete
+              %h4{ class: "content__main__wrapper__idea__delete__title font-weight600" }アイデアを削除する
+              %p{ class: 'content__main__wrapper__idea__delete__text'}
+                　アイデアスペースにある
+                = image_tag('icon-for-memo-area/delete.png')
+                アイコンを押すと、アイデアを削除するかどうか確認する画面が表示されますので、よろしければ「はい」を押してください。
+            .content__main__wrapper__idea__see.one-help-unit#idea-see
+              %h4{ class: "content__main__wrapper__idea__see__title font-weight600" }アイデアを見る
+              %p{ class: 'content__main__wrapper__idea__see__text'}
+              　トップページには最終更新日順にアイデアが並びます。これらを流し読みすることも可能ですが、効率良くアイデアを見直すためにサイドメニューも利用してみてください。<br>
+              　最近のアイデアにどんなものがあったかを簡単に復習する際には、サイドメニューの最新アイデアのタイトルが10件が役に立ちます。<br>
+              　また、サイドメニューのカレンダー上の日付をクリックすれば、その日にアウトプットしたアイデアまで飛ぶことができます。
+          .content__main__wrapper__account
+            %h3{ class: "content__main__wrapper__account__title font-weight600" }アカウント
+            .content__main__wrapper__account__chagnge-name.one-help-unit#account-change-name
+              %h4{ class: "content__main__wrapper__account__change-name__title font-weight600" }アカウント名を変更する
+              %p{ class: 'content__main__wrapper__account__change-name__text'}
+              　
+              = link_to 'こちら', edit_user_registration_path
+              から行えます。
+            .content__main__wrapper__account__change-email.one-help-unit#account-change-email
+              %h4{ class: "content__main__wrapper__account__change-email__title font-weight600" }メールアドレスを変更する
+              %p{ class: 'content__main__wrapper__account__change-email__text'}
+              　
+              = link_to 'こちら', edit_user_registration_path
+              から行えます。
+            .content__main__wrapper__account__change-password.one-help-unit#account-change-password
+              %h4{ class: "content__main__wrapper__account__change-password__title font-weight600" }パスワードを変更する
+              %p{ class: 'content__main__wrapper__account__change-password__text'}
+              　
+              = link_to 'こちら', edit_user_registration_path
+              から行えます。
+            .content__main__wrapper__account__delete.one-help-unit#account-delete
+              %h4{ class: "content__main__wrapper__account__delete_title font-weight600" }アカウントを削除する
+              %p{ class: 'content__main__wrapper__account__delete__text'}
+              　
+              = link_to 'こちら', edit_user_registration_path
+              から行えます。
