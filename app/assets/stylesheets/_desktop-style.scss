@@ -123,6 +123,10 @@ input:-moz-placeholder {
   padding: 0!important;
 }
 
+.not-display-header {
+  display: none!important;
+}
+
 // スクエア
 .square {
   width: 8px;
