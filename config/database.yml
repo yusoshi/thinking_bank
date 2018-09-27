@@ -20,10 +20,6 @@ default: &default
 development:
   <<: *default
   database: thinking_bank_development
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-
-  socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -54,5 +50,6 @@ test:
 production:
   <<: *default
   database: thinking_bank_production
-  username: thinking_bank
-  password: <%= ENV['THINKING_BANK_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
