@@ -1,10 +1,10 @@
 %table{ class: "second-header__calendar-area__calendar"}
   .second-header__calendar-area__calendar__yajirushi.back_month
-    = link_to image_tag('yajirushi_left_white'), ''
+    = link_to image_tag('yajirushi_left_white.png'), ''
   %caption{ class: 'caption', 'data-caption-month': "#{@today}" }
     = @today.strftime("%Y年%m月")
   .second-header__calendar-area__calendar__yajirushi.forward_month
-    = link_to image_tag('yajirushi_right_white'), ''
+    = link_to image_tag('yajirushi_right_white.png'), ''
   %tr
     %th{ id: "sunday" }
       日

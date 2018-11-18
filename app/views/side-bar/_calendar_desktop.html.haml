@@ -1,11 +1,11 @@
 - @d = @today.at_beginning_of_month.at_beginning_of_week(:sunday)
 %table{ class: "content__index-sub-menu__calendar-area__calendar"}
   .content__index-sub-menu__calendar-area__calendar__yajirushi.back_month
-    = link_to image_tag('yajirushi_left'), ''
+    = link_to image_tag('yajirushi_left.png'), ''
   %caption{ class: 'caption', 'data-caption-month': "#{@today}" }
     = @today.strftime("%Y年%m月")
   .content__index-sub-menu__calendar-area__calendar__yajirushi.forward_month
-    = link_to image_tag('yajirushi_right'), ''
+    = link_to image_tag('yajirushi_right.png'), ''
   %tr
     %th{ id: "sunday" }
       日
